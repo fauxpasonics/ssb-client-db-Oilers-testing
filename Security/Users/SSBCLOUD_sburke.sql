@@ -1,0 +1,5 @@
+IF NOT EXISTS (SELECT * FROM master.dbo.syslogins WHERE loginname = N'SSBCLOUD\sburke')
+CREATE LOGIN [SSBCLOUD\sburke] FROM WINDOWS
+GO
+CREATE USER [SSBCLOUD\sburke] FOR LOGIN [SSBCLOUD\sburke]
+GO
